@@ -47,6 +47,8 @@ const userSchema = new mongoose.Schema({
       required: true
     }
   }]
+}, {
+  timestamps: true
 })
 
 // virtual schema for mongoose to figure out the relationship between fields
