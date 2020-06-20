@@ -4,7 +4,8 @@ const userRouter = require('./routers/user')
 const taskRouter = require('./routers/task')
 
 const app = express()
-const port = process.env.PORT || 3000 // Heroku dependent PORT
+// const port = process.env.PORT || 3000 // Heroku dependent environment PORT
+const port = process.env.PORT
 
 app.use(express.json())
 app.use(userRouter)
@@ -13,6 +14,3 @@ app.use(taskRouter)
 app.listen(port, () => {
   console.log('Server is up on port ' + port)
 })
-
-const Task = require('./models/task')
-const User = require('./models/user')
